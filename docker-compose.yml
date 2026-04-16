@@ -1,0 +1,18 @@
+version: "3.8"
+
+services:
+  db-monitoreo:
+    image: postgres:15
+    container_name: postgres_iot_project
+    restart: always
+    environment:
+      POSTGRES_USER: tu_usuario
+      POSTGRES_PASSWORD: tu_password
+      POSTGRES_DB: monitoreo_iot
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+volumes:
+  postgres_data:
