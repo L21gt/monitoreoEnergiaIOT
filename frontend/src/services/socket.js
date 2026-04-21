@@ -1,17 +1,16 @@
 // src/services/socket.js
-import { io } from "socket.io-client";
+import { io } from 'socket.io-client';
 
-const URL_SERVIDOR = "http://localhost:3000";
-
-/**
- * Inicializa la conexion con el servidor de WebSockets.
- * Se debe pasar el token obtenido de Auth0 para superar el handshake.
- */
 export const conectarSocket = (token) => {
-  return io(URL_SERVIDOR, {
-    auth: {
-      token: token,
-    },
-    transports: ["websocket"],
-  });
+    const socket = io('http://localhost:3000', {
+        auth: {
+            token: token // <-- IMPORTANTE: Solo enviamos el token puro, sin "Bearer "
+        }
+    });
+
+    socket.on('connect_error', (err) => {
+        console.error("Error de socket:", err.message);
+    });
+
+    return socket;
 };

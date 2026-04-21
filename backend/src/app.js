@@ -17,8 +17,9 @@ const server = http.createServer(app);
 // Configuracion de WebSockets
 const io = new Server(server, {
   cors: {
-    origin: "*", // Permitir conexiones de cualquier origen en desarrollo
+    origin: "http://localhost:5173",
     methods: ["GET", "POST"],
+    credentials: true
   },
 });
 
@@ -38,6 +39,8 @@ function getKey(header, callback) {
 io.use((socket, next) => {
   // El token suele venir en el objeto 'auth' del cliente socket.io
   const token = socket.handshake.auth.token;
+
+  console.log("Token recibido en el Socket:", token ? "Sí hay token" : "No hay token");
 
   if (!token) {
     return next(new Error("Error de autenticación: Token no proporcionado"));

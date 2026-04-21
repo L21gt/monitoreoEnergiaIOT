@@ -10,6 +10,7 @@ import {
     Title,
     Tooltip,
     Legend,
+    Filler
 } from 'chart.js';
 
 // Registro de componentes de Chart.js necesarios para graficas de linea
@@ -20,7 +21,8 @@ ChartJS.register(
     LineElement,
     Title,
     Tooltip,
-    Legend
+    Legend,
+    Filler
 );
 
 const GraficaTiempoReal = ({ socket }) => {
@@ -58,20 +60,37 @@ const GraficaTiempoReal = ({ socket }) => {
 
     const opciones = {
         responsive: true,
+        maintainAspectRatio: false, // <-- LA PROPIEDAD CLAVE PARA QUE OBEDEZCA AL CSS
+        
+        // El resto de tus configuraciones visuales se mantienen igual:
         plugins: {
-            legend: { position: 'top' },
-            title: { display: false }
+            legend: {
+                position: 'top',
+            },
+            tooltip: {
+                mode: 'index',
+                intersect: false,
+            },
         },
         scales: {
-            y: { beginAtZero: true }
+            y: {
+                beginAtZero: true,
+                title: {
+                    display: true,
+                    text: 'Vatios (W)'
+                }
+            },
+            x: {
+                title: {
+                    display: true,
+                    text: 'Tiempo'
+                }
+            }
         }
     };
 
     return (
-        <div className="tarjeta-grafica">
-            <h3 className="titulo-tarjeta">Potencia en Tiempo Real (W)</h3>
-            <Line data={data} options={opciones} />
-        </div>
+        <Line data={data} options={opciones} />
     );
 };
 

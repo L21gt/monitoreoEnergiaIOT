@@ -10,4 +10,13 @@ const { verificarToken } = require("../middleware/authMiddleware");
  */
 router.post("/", verificarToken, metricaController.procesarMetrica);
 
+// Nuevo endpoint para la gráfica de barras histórica
+router.get("/historico", verificarToken, metricaController.getHistorico);
+
+// Nuevo endpoint para la tabla avanzada
+router.get("/logs", verificarToken, metricaController.getLogsAvanzados);
+
+// Endpoint para la gráfica de dona
+router.get("/estado-nodos", verificarToken, metricaController.getEstadoNodos);
+
 module.exports = router;
