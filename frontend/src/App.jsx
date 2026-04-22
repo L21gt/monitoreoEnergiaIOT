@@ -6,6 +6,7 @@ import GraficaTiempoReal from './components/GraficaTiempoReal';
 import GraficaDonaNodos from './components/GraficaDonaNodos';
 import GraficaBarrasHistorica from './components/GraficaBarrasHistorica';
 import TablaLogsAvanzada from './components/TablaLogsAvanzada';
+import NotificadorAlertas from './components/NotificadorAlertas';
 import './styles/dashboard.css';
 
 function App() {
@@ -106,14 +107,17 @@ function App() {
                 {/* Columna Lateral (25%) */}
                 <div>
                     <section className="tarjeta-grafica">
-                        <h2 className="titulo-tarjeta">Distribución por Nodo</h2>
-                        <GraficaDonaNodos />
+                        <h2 className="titulo-tarjeta">Distribución por Nodo</h2>                        
+                        <GraficaDonaNodos socket={socket} />
                     </section>
                 </div>
             </main>
 
             {/* Nueva sección: Tabla de logs a ancho completo */}
             <TablaLogsAvanzada />
+
+            {/* Listener invisible para notificaciones críticas */}
+            {socket && <NotificadorAlertas socket={socket} />}
         </div>
     );
 }

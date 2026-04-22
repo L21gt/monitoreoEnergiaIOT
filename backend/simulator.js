@@ -25,44 +25,63 @@ async function ejecutarSimulador() {
 
     // 2. Iniciamos el envío de datos cada 5 segundos
     setInterval(async () => {
-      // Generación de valores aleatorios realistas
-      const vatios = Math.floor(Math.random() * (500 - 100 + 1)) + 100;
-      const voltaje = Math.floor(Math.random() * (125 - 110 + 1)) + 110;
-
-      // Array de criticidad según los requerimientos del PDF
-      const nivelesCriticidad = ["info", "warning", "error"];
-      const criticidadActual =
-        nivelesCriticidad[Math.floor(Math.random() * nivelesCriticidad.length)];
-
-      // Asignación de código HTTP simulado basado en la criticidad
-      const statusCode =
-        criticidadActual === "error"
-          ? 500
-          : criticidadActual === "warning"
-            ? 400
-            : 200;
-
-      const metrica = {
-        nodo_id: "11111111-1111-1111-1111-111111111111", // Mantenemos tu UUID configurado
-        vatios_generados: vatios,
-        voltaje: voltaje,
-        status_code: statusCode,
-        criticidad: criticidadActual,
-        mensaje: `Transmisión en tiempo real - Estado: ${criticidadActual}`,
-        timestamp: new Date().toISOString(),
-      };
-
       try {
-        // 3. Enviamos el dato a nuestro backend incluyendo el token
-        await axios.post("http://localhost:3000/api/metricas", metrica, {
-          headers: {
-            Authorization: `Bearer ${token}`,
+        // Array con toda tu infraestructura de nodos
+        const nodosActivos = [
+          "11111111-1111-1111-1111-111111111111",
+          "22222222-2222-2222-2222-222222222222",
+          "33333333-3333-3333-3333-333333333333",
+          "44444444-4444-4444-4444-444444444444",
+        ];
+
+        // Selección aleatoria
+        const nodoSeleccionado =
+          nodosActivos[Math.floor(Math.random() * nodosActivos.length)];
+
+        // Generación de valores aleatorios
+        const vatios = Math.floor(Math.random() * (500 - 100 + 1)) + 100;
+        const voltaje = Math.floor(Math.random() * (125 - 110 + 1)) + 110;
+
+        const nivelesCriticidad = ["info", "warning", "error"];
+        const criticidadActual =
+          nivelesCriticidad[
+            Math.floor(Math.random() * nivelesCriticidad.length)
+          ];
+        const statusCode =
+          criticidadActual === "error"
+            ? 500
+            : criticidadActual === "warning"
+              ? 400
+              : 200;
+
+        const metrica = {
+          nodo_id: nodoSeleccionado,
+          vatios_generados: vatios,
+          voltaje: voltaje,
+          status_code: statusCode,
+          criticidad: criticidadActual,
+          mensaje: `Transmisión en tiempo real - Estado: ${criticidadActual}`,
+          timestamp: new Date().toISOString(),
+        };
+
+        // Petición POST a tu API
+        const response = await axios.post(
+          "http://localhost:3000/api/metricas",
+          metrica,
+          {
+            headers: {
+              Authorization: `Bearer ${token}`,
+              "Content-Type": "application/json",
+            },
           },
-        });
-        console.log(`📡 Dato enviado: ${vatios} W`);
+        );
+
+        console.log(
+          `📡 [${metrica.criticidad.toUpperCase()}] Dato enviado a nodo ${nodoSeleccionado.split("-")[0]}...`,
+        );
       } catch (error) {
         console.error(
-          "❌ Error enviando métrica:",
+          "❌ Error enviando métrica al servidor:",
           error.response ? error.response.data : error.message,
         );
       }

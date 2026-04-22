@@ -12,6 +12,14 @@ const procesarMetrica = async (req, res) => {
     // Se utiliza req.io inyectado en app.js para evitar variables globales
     req.io.emit("Nueva Metrica", metricaGuardada);
 
+    // Evaluación y emisión de Alerta Crítica
+    if (
+      metricaGuardada.criticidad === "warning" ||
+      metricaGuardada.criticidad === "error"
+    ) {
+      req.io.emit("Alerta Critica", metricaGuardada);
+    }
+
     // Si la criticidad es 'error', emitimos una alerta adicional para el Dashboard
     if (metricaGuardada.criticidad === "error") {
       req.io.emit("Alerta Critica", {
