@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coverage generated="1776924695279" clover="3.2.0">
+  <project timestamp="1776924695279" name="All files">
+    <metrics statements="171" coveredstatements="139" conditionals="43" coveredconditionals="24" methods="23" coveredmethods="14" elements="237" coveredelements="177" complexity="0" loc="171" ncloc="171" packages="6" files="9" classes="9"/>
+    <package name="src">
+      <metrics statements="42" coveredstatements="24" conditionals="12" coveredconditionals="1" methods="8" coveredmethods="1"/>
+      <file name="app.js" path="C:\Users\usuario\Desktop\Telus\Galileo FullStack\Cursos grabacion\Semestre 5\UI-UX\Proyectos\monitoreo_Energia_IOT\backend\src\app.js">
+        <metrics statements="42" coveredstatements="24" conditionals="12" coveredconditionals="1" methods="8" coveredmethods="1"/>
+        <line num="2" count="2" type="stmt"/>
+        <line num="3" count="2" type="stmt"/>
+        <line num="4" count="2" type="stmt"/>
+        <line num="5" count="2" type="stmt"/>
+        <line num="6" count="2" type="stmt"/>
+        <line num="7" count="2" type="stmt"/>
+        <line num="8" count="2" type="stmt"/>
+        <line num="9" count="2" type="stmt"/>
+        <line num="12" count="2" type="stmt"/>
+        <line num="14" count="2" type="stmt"/>
+        <line num="15" count="2" type="stmt"/>
+        <line num="18" count="2" type="stmt"/>
+        <line num="27" count="2" type="stmt"/>
+        <line num="32" count="0" type="stmt"/>
+        <line num="33" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="34" count="0" type="stmt"/>
+        <line num="39" count="2" type="stmt"/>
+        <line num="41" count="0" type="stmt"/>
+        <line num="43" count="0" type="stmt"/>
+        <line num="48" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="49" count="0" type="stmt"/>
+        <line num="53" count="0" type="stmt"/>
+        <line num="62" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="63" count="0" type="stmt"/>
+        <line num="66" count="0" type="stmt"/>
+        <line num="67" count="0" type="stmt"/>
+        <line num="73" count="2" type="stmt"/>
+        <line num="74" count="2" type="stmt"/>
+        <line num="77" count="2" type="stmt"/>
+        <line num="78" count="13" type="stmt"/>
+        <line num="79" count="13" type="stmt"/>
+        <line num="83" count="2" type="stmt"/>
+        <line num="84" count="2" type="stmt"/>
+        <line num="87" count="2" type="stmt"/>
+        <line num="88" count="0" type="stmt"/>
+        <line num="90" count="0" type="stmt"/>
+        <line num="91" count="0" type="stmt"/>
+        <line num="96" count="2" type="cond" truecount="1" falsecount="1"/>
+        <line num="97" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="98" count="0" type="stmt"/>
+        <line num="99" count="0" type="stmt"/>
+        <line num="104" count="2" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.config">
+      <metrics statements="11" coveredstatements="6" conditionals="2" coveredconditionals="0" methods="2" coveredmethods="0"/>
+      <file name="db.js" path="C:\Users\usuario\Desktop\Telus\Galileo FullStack\Cursos grabacion\Semestre 5\UI-UX\Proyectos\monitoreo_Energia_IOT\backend\src\config\db.js">
+        <metrics statements="11" coveredstatements="6" conditionals="2" coveredconditionals="0" methods="2" coveredmethods="0"/>
+        <line num="2" count="2" type="stmt"/>
+        <line num="3" count="2" type="stmt"/>
+        <line num="5" count="2" type="stmt"/>
+        <line num="10" count="2" type="stmt"/>
+        <line num="11" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="12" count="0" type="stmt"/>
+        <line num="14" count="0" type="stmt"/>
+        <line num="22" count="2" type="stmt"/>
+        <line num="23" count="0" type="stmt"/>
+        <line num="24" count="0" type="stmt"/>
+        <line num="27" count="2" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.controllers">
+      <metrics statements="47" coveredstatements="47" conditionals="14" coveredconditionals="13" methods="6" coveredmethods="6"/>
+      <file name="metricaController.js" path="C:\Users\usuario\Desktop\Telus\Galileo FullStack\Cursos grabacion\Semestre 5\UI-UX\Proyectos\monitoreo_Energia_IOT\backend\src\controllers\metricaController.js">
+        <metrics statements="33" coveredstatements="33" conditionals="14" coveredconditionals="13" methods="4" coveredmethods="4"/>
+        <line num="2" count="2" type="stmt"/>
+        <line num="7" count="2" type="stmt"/>
+        <line num="8" count="3" type="stmt"/>
+        <line num="9" count="3" type="stmt"/>
+        <line num="13" count="2" type="stmt"/>
+        <line num="16" count="2" type="cond" truecount="2" falsecount="0"/>
+        <line num="20" count="1" type="stmt"/>
+        <line num="24" count="2" type="cond" truecount="2" falsecount="0"/>
+        <line num="25" count="1" type="stmt"/>
+        <line num="32" count="2" type="stmt"/>
+        <line num="34" count="1" type="stmt"/>
+        <line num="35" count="1" type="stmt"/>
+        <line num="39" count="2" type="stmt"/>
+        <line num="40" count="2" type="stmt"/>
+        <line num="42" count="2" type="cond" truecount="1" falsecount="1"/>
+        <line num="45" count="2" type="stmt"/>
+        <line num="47" count="1" type="stmt"/>
+        <line num="52" count="1" type="stmt"/>
+        <line num="53" count="1" type="stmt"/>
+        <line num="60" count="2" type="stmt"/>
+        <line num="61" count="2" type="stmt"/>
+        <line num="62" count="2" type="stmt"/>
+        <line num="64" count="2" type="stmt"/>
+        <line num="70" count="1" type="stmt"/>
+        <line num="75" count="1" type="stmt"/>
+        <line num="76" count="1" type="stmt"/>
+        <line num="83" count="2" type="stmt"/>
+        <line num="84" count="2" type="stmt"/>
+        <line num="85" count="2" type="stmt"/>
+        <line num="86" count="1" type="stmt"/>
+        <line num="91" count="1" type="stmt"/>
+        <line num="92" count="1" type="stmt"/>
+        <line num="99" count="2" type="stmt"/>
+      </file>
+      <file name="nodoController.js" path="C:\Users\usuario\Desktop\Telus\Galileo FullStack\Cursos grabacion\Semestre 5\UI-UX\Proyectos\monitoreo_Energia_IOT\backend\src\controllers\nodoController.js">
+        <metrics statements="14" coveredstatements="14" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
+        <line num="2" count="2" type="stmt"/>
+        <line num="7" count="2" type="stmt"/>
+        <line num="8" count="2" type="stmt"/>
+        <line num="10" count="2" type="stmt"/>
+        <line num="13" count="1" type="stmt"/>
+        <line num="15" count="1" type="stmt"/>
+        <line num="16" count="1" type="stmt"/>
+        <line num="22" count="2" type="stmt"/>
+        <line num="23" count="2" type="stmt"/>
+        <line num="24" count="2" type="stmt"/>
+        <line num="25" count="1" type="stmt"/>
+        <line num="27" count="1" type="stmt"/>
+        <line num="28" count="1" type="stmt"/>
+        <line num="32" count="2" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.middleware">
+      <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      <file name="authMiddleware.js" path="C:\Users\usuario\Desktop\Telus\Galileo FullStack\Cursos grabacion\Semestre 5\UI-UX\Proyectos\monitoreo_Energia_IOT\backend\src\middleware\authMiddleware.js">
+        <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="2" count="1" type="stmt"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="10" count="1" type="stmt"/>
+        <line num="16" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.routes">
+      <metrics statements="16" coveredstatements="16" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      <file name="metricaRoutes.js" path="C:\Users\usuario\Desktop\Telus\Galileo FullStack\Cursos grabacion\Semestre 5\UI-UX\Proyectos\monitoreo_Energia_IOT\backend\src\routes\metricaRoutes.js">
+        <metrics statements="9" coveredstatements="9" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="2" count="2" type="stmt"/>
+        <line num="3" count="2" type="stmt"/>
+        <line num="4" count="2" type="stmt"/>
+        <line num="5" count="2" type="stmt"/>
+        <line num="11" count="2" type="stmt"/>
+        <line num="14" count="2" type="stmt"/>
+        <line num="17" count="2" type="stmt"/>
+        <line num="20" count="2" type="stmt"/>
+        <line num="22" count="2" type="stmt"/>
+      </file>
+      <file name="nodoRoutes.js" path="C:\Users\usuario\Desktop\Telus\Galileo FullStack\Cursos grabacion\Semestre 5\UI-UX\Proyectos\monitoreo_Energia_IOT\backend\src\routes\nodoRoutes.js">
+        <metrics statements="7" coveredstatements="7" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="2" count="2" type="stmt"/>
+        <line num="3" count="2" type="stmt"/>
+        <line num="4" count="2" type="stmt"/>
+        <line num="5" count="2" type="stmt"/>
+        <line num="12" count="2" type="stmt"/>
+        <line num="15" count="2" type="stmt"/>
+        <line num="17" count="2" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.services">
+      <metrics statements="51" coveredstatements="42" conditionals="15" coveredconditionals="10" methods="7" coveredmethods="7"/>
+      <file name="metricaService.js" path="C:\Users\usuario\Desktop\Telus\Galileo FullStack\Cursos grabacion\Semestre 5\UI-UX\Proyectos\monitoreo_Energia_IOT\backend\src\services\metricaService.js">
+        <metrics statements="40" coveredstatements="31" conditionals="15" coveredconditionals="10" methods="5" coveredmethods="5"/>
+        <line num="2" count="3" type="stmt"/>
+        <line num="7" count="3" type="stmt"/>
+        <line num="17" count="4" type="stmt"/>
+        <line num="19" count="4" type="stmt"/>
+        <line num="24" count="4" type="stmt"/>
+        <line num="33" count="4" type="stmt"/>
+        <line num="34" count="2" type="stmt"/>
+        <line num="39" count="1" type="stmt"/>
+        <line num="45" count="1" type="stmt"/>
+        <line num="46" count="0" type="stmt"/>
+        <line num="50" count="3" type="cond" truecount="1" falsecount="0"/>
+        <line num="53" count="3" type="stmt"/>
+        <line num="64" count="3" type="stmt"/>
+        <line num="65" count="1" type="stmt"/>
+        <line num="68" count="3" type="stmt"/>
+        <line num="70" count="3" type="stmt"/>
+        <line num="83" count="3" type="stmt"/>
+        <line num="84" count="3" type="stmt"/>
+        <line num="87" count="3" type="cond" truecount="2" falsecount="0"/>
+        <line num="88" count="2" type="stmt"/>
+        <line num="89" count="1" type="cond" truecount="1" falsecount="1"/>
+        <line num="90" count="0" type="stmt"/>
+        <line num="91" count="1" type="cond" truecount="1" falsecount="1"/>
+        <line num="92" count="0" type="stmt"/>
+        <line num="96" count="3" type="cond" truecount="3" falsecount="1"/>
+        <line num="97" count="0" type="stmt"/>
+        <line num="98" count="0" type="stmt"/>
+        <line num="99" count="0" type="stmt"/>
+        <line num="103" count="3" type="cond" truecount="2" falsecount="2"/>
+        <line num="104" count="0" type="stmt"/>
+        <line num="105" count="0" type="stmt"/>
+        <line num="106" count="0" type="stmt"/>
+        <line num="110" count="3" type="stmt"/>
+        <line num="112" count="3" type="stmt"/>
+        <line num="113" count="1" type="stmt"/>
+        <line num="116" count="3" type="stmt"/>
+        <line num="118" count="4" type="stmt"/>
+        <line num="144" count="4" type="stmt"/>
+        <line num="145" count="2" type="stmt"/>
+        <line num="148" count="3" type="stmt"/>
+      </file>
+      <file name="nodoService.js" path="C:\Users\usuario\Desktop\Telus\Galileo FullStack\Cursos grabacion\Semestre 5\UI-UX\Proyectos\monitoreo_Energia_IOT\backend\src\services\nodoService.js">
+        <metrics statements="11" coveredstatements="11" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
+        <line num="2" count="2" type="stmt"/>
+        <line num="7" count="2" type="stmt"/>
+        <line num="11" count="2" type="stmt"/>
+        <line num="12" count="2" type="stmt"/>
+        <line num="17" count="2" type="stmt"/>
+        <line num="19" count="2" type="stmt"/>
+        <line num="20" count="1" type="stmt"/>
+        <line num="25" count="2" type="stmt"/>
+        <line num="26" count="2" type="stmt"/>
+        <line num="27" count="1" type="stmt"/>
+        <line num="31" count="2" type="stmt"/>
+      </file>
+    </package>
+  </project>
+</coverage>

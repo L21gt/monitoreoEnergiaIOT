@@ -19,7 +19,7 @@ const io = new Server(server, {
   cors: {
     origin: "http://localhost:5173",
     methods: ["GET", "POST"],
-    credentials: true
+    credentials: true,
   },
 });
 
@@ -40,7 +40,10 @@ io.use((socket, next) => {
   // El token suele venir en el objeto 'auth' del cliente socket.io
   const token = socket.handshake.auth.token;
 
-  console.log("Token recibido en el Socket:", token ? "Sí hay token" : "No hay token");
+  console.log(
+    "Token recibido en el Socket:",
+    token ? "Sí hay token" : "No hay token",
+  );
 
   if (!token) {
     return next(new Error("Error de autenticación: Token no proporcionado"));
@@ -89,7 +92,13 @@ io.on("connection", (socket) => {
   });
 });
 
-const PORT = process.env.PORT || 3000;
-server.listen(PORT, () => {
-  console.log(`Servidor de monitoreo corriendo en el puerto ${PORT}`);
-});
+// Evitamos que el servidor arranque en el puerto físico si es importado por Jest
+if (require.main === module) {
+  const PORT = process.env.PORT || 3000;
+  server.listen(PORT, () => {
+    console.log(`Servidor de monitoreo corriendo en el puerto ${PORT}`);
+  });
+}
+
+// Exportamos la instancia de Express para que Supertest la utilice
+module.exports = app;

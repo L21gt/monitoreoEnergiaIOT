@@ -1,0 +1,43 @@
+name: CI Pipeline de Monitoreo IoT
+
+on:
+  push:
+    branches: [main, master]
+  pull_request:
+    branches: [main, master]
+
+jobs:
+  backend-testing:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Instalando Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
+
+      - name: Instalar dependencias Backend
+        run: |
+          cd backend
+          npm install
+
+      - name: Ejecutar Tests con Cobertura (Min 80%)
+        run: |
+          cd backend
+          npm test
+        env:
+          # Usamos variables falsas para el entorno de pruebas automatizadas
+          DATABASE_URL: "postgresql://usuario_test:pass_test@localhost:5432/db_test"
+          AUTH0_DOMAIN: "https://tenant-falso-de-prueba.us.auth0.com/"
+          AUTH0_AUDIENCE: "http://api-monitoreo-test"
+
+  frontend-testing:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Instalar y Probar Frontend
+        run: |
+          cd frontend
+          npm install
+          npm test -- --watchAll=false --coverage

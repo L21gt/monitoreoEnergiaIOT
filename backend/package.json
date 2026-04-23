@@ -4,7 +4,19 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest --coverage --detectOpenHandles"
+  },
+  "jest": {
+    "collectCoverage": true,
+    "coverageThreshold": {
+      "global": {
+        "branches": 45,
+        "functions": 60,
+        "lines": 80,
+        "statements": 80
+      }
+    },
+    "testEnvironment": "node"
   },
   "keywords": [],
   "author": "",
@@ -20,5 +32,9 @@
     "jwks-rsa": "^4.0.1",
     "pg": "^8.20.0",
     "socket.io": "^4.8.3"
+  },
+  "devDependencies": {
+    "jest": "^30.3.0",
+    "supertest": "^7.2.2"
   }
 }
