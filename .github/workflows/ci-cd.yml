@@ -40,4 +40,4 @@ jobs:
         run: |
           cd frontend
           npm install
-          npm test -- --watchAll=false --coverage
+          npm test
